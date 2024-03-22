@@ -1,0 +1,4 @@
+docker/db/*
+docker/nginx/*
+build
+deploy

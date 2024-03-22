@@ -1,0 +1,7 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'asia-northeast1-docker.pkg.dev/${PROJECT_ID}/sample/laravel-project:1.0', 'docker/php/Dockerfile', '.']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'asia-northeast1-docker.pkg.dev/${PROJECT_ID}/sample/laravel-project']
+images:
+  - 'asia-northeast1-docker.pkg.dev/${PROJECT_ID}/reacquisition-batch/sample/laravel-project:1.0'
